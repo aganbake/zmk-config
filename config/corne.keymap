@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
-#ifdef CONFIG_ZMK_RGB_UNDERGLOW
+###ifdef CONFIG_ZMK_RGB_UNDERGLOW
 #    include <dt-bindings/led/led.h>
 #    include <../boards/shields/corne/boards/nice_nano.overlay>
 #ifdef CONFIG_ZMK_RGB_UNDERGLOW
