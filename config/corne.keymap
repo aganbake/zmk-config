@@ -11,16 +11,17 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
+#ifdef CONFIG_ZMK_RGB_UNDERGLOW {{{
+#    include <dt-bindings/led/led.h>
+#    include <../boards/shields/corne/boards/nice_nano.overlay>
 #ifdef CONFIG_ZMK_RGB_UNDERGLOW
-#       include <dt-bindings/zmk/rgb.h>
-#       include <dt-bindings/led/led.h>
-
-#include <../boards/shields/corne/boards/nice_nano.overlay>
-
-// Overwrite number of leds on the keyboard. A Corne has 27 per side.
-&led_strip { chain-length = <27>; };
-
+#    include <dt-bindings/zmk/rgb.h>
 #endif // CONFIG_ZMK_RGB_UNDERGLOW
+}}}
+
+// define blueth
+#define BT(n) BT_SEL n
+//}}}
 
 // defines readable layer index
 #define DEFAULT 0
@@ -128,7 +129,7 @@
 //                                 '--------+---------+---------'    '---------+---------+---------'
 
                         bindings = <
-    &bt BT_CLR          &bt BT_SEL(0) &bt BT_SEL(1) &bt BT_SEL(2) &bt BT_SEL(3) &bt BT_SEL(4)      &rgb_ug RGB_TOG     &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF
+    &bt BT_CLR          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &rgb_ug RGB_TOG     &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF
     &ext_power EP_ON    &none         &none         &none         &none         &none              &out OUT_TOG        &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR
     &ext_power EP_OFF   &none         &none         &none         &none         &none              &none               &none           &none           &none           &none           &none
                                                     &kp LALT      &none         &none              &none               &none           &trans
