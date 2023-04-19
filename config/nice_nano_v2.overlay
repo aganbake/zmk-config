@@ -1,5 +1,5 @@
 #include <dt-bindings/led/led.h>
-
+/*
 &spi1 {
 	compatible = "nordic,nrf-spim";
 	/* Cannot be used together with i2c0. */
@@ -31,3 +31,4 @@
 		zmk,underglow = &led_strip;
 	};
 };
+*/
