@@ -11,17 +11,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
-#ifdef CONFIG_ZMK_RGB_UNDERGLOW {{{
+#ifdef CONFIG_ZMK_RGB_UNDERGLOW
 #    include <dt-bindings/led/led.h>
 #    include <../boards/shields/corne/boards/nice_nano.overlay>
 #ifdef CONFIG_ZMK_RGB_UNDERGLOW
 #    include <dt-bindings/zmk/rgb.h>
 #endif // CONFIG_ZMK_RGB_UNDERGLOW
-}}}
+
 
 // define blueth
 #define BT(n) BT_SEL n
-//}}}
 
 // defines readable layer index
 #define DEFAULT 0
