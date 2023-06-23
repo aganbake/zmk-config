@@ -37,13 +37,13 @@
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |   CTRL       |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |   ,;    |    :.   |    /-_   |   NAV    |
 // '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
-//                                   |  GUI   |   LWR   |AltGr/SPC|       |  ENT  |   RSE   |  LALT   |
+//                                   |  GUI   |   LWR   |   SPC   |       |  ENT  |   RSE   | LALT/Gr |
 //                                   '--------+---------+---------'       '-------+---------+---------'
                   bindings = <
         &kp TAB        &kp Q    &kp W    &kp E    &kp R     &kp T           &kp Y    &kp U      &kp I     &kp O     &kp P     &kp BKSP
         &mt LSHFT TAB  &kp A    &kp S    &kp D    &kp F     &kp G           &kp H    &kp J      &kp K     &kp L     &kp SCLN  &kp QUOT
         &kp LCTL       &kp Z    &kp X    &kp C    &kp V     &kp B           &kp N    &kp M      &kp CMMA  &kp DOT   &kp FSLH  &mo NAVI
-                                       &kp LGUI  &mo LOWER  &mt RALT SPC    &kp RET  &mo RAISE  &kp LALT
+                                       &kp LGUI  &mo LOWER  &kp SPC    &kp RET  &mo RAISE  &mt RALT LALT
                             >;
                 };
 
