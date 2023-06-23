@@ -14,8 +14,6 @@
 
 #include <../boards/shields/corne/boards/nice_nano.overlay>
 
-&led_strip { chain-length = <27>; };
-
 // define blueth
 #define BT(n) BT_SEL n
 
