@@ -156,5 +156,6 @@
 / {
   chosen {
     zephyr,display = &oled;
+    zmk,Underglow = &led_strip;
   };
 };
