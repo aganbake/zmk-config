@@ -153,7 +153,7 @@
   };
 };
 
-&spi1 {
+/*&spi1 {
 	compatible = "nordic,nrf-spim";
 	/* Cannot be used together with i2c0. */
 	status = "okay";
@@ -177,11 +177,13 @@
 
 		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
 	};
-};
-
+};*/
+&led_strip{
+  chain-length = <54>;
+}
 / {
   chosen {
     zephyr,display = &oled;
-    zmk,Underglow = &led_strip;
+    //zmk,Underglow = &led_strip;
   };
 };
